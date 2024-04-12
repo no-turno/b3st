@@ -1,0 +1,31 @@
+run = "bun run dev"
+entrypoint = "index.js"
+hidden = [".config", "bun.lockb", ".next", ".swc"]
+
+[nix]
+channel = "stable-23_11"
+
+[env]
+NEXT_TELEMETRY_DISABLED = "1"
+XDG_CONFIG_HOME = "/home/runner/$REPL_SLUG/.config"
+npm_config_prefix = "/home/runner/$REPL_SLUG/.config/npm/node_global"
+BUN_INSTALL = "/home/runner/$REPL_SLUG/.config/.bun"
+PATH = "/home/runner/$REPL_SLUG/.config/.bun/bin:/home/runner/$REPL_SLUG/.config/npm/node_global/bin"
+
+
+[packager]
+language = "bunjs"
+
+[packager.features]
+packageSearch = true
+enabledForHosting = false
+guessImports = true
+
+[deployment]
+build = ["bun", "run", "build"]
+run = ["bun", "run", "start"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 3000
+externalPort = 80

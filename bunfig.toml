@@ -1,0 +1,10 @@
+jsx = "react-jsx"
+jsxImportSource = "react"
+
+[loader]
+".js" = "jsx"
+".jsx" = "jsx"
+".css" = "css"
+
+[install]
+auto = true

@@ -2,6 +2,22 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"]
-    }
-  }
+    },
+    "types": ["react/canary"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "target": "ESNext",
+    "strict": true,
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "WebWorker"],
+    "noEmit": true,
+    "moduleResolution": "Bundler",
+    "outDir": ".next",
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "emitBOM": true
+  },
+  "include": ["app", "next.*.js", "next.*.jsx"],
+  "exclude": ["node_modules", ".cache", ".config"]
 }
