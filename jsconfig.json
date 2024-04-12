@@ -10,7 +10,6 @@
     "strict": true,
     "module": "ESNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable", "WebWorker"],
-    "noEmit": true,
     "moduleResolution": "Bundler",
     "outDir": ".next",
     "baseUrl": ".",
